@@ -33,19 +33,35 @@ const teamMebers = [
     },
 ];
 
+// Dichiaro il container degli oggetti
+const memberContainer = document.getElementById("member-container");
+
 // Stampo in console gli oggetti dell'array
 for(let i = 0; i < teamMebers.length; i++){
+
+    // creo una lista per ogni oggetto
+    const memberElement = document.createElement("ul");    
 
     const member = teamMebers[i];
 
     // creo un ciclo for per far stampare tutte le propietà 
     for( let key in member){
         
-        console.log(`${key}: ${member[key]}`)
+        console.log(`${key}: ${member[key]}`);
+
+
+        // Creo gli elementi nella lista oggetto per ogni proprietà
+        const memberElementkey = document.createElement("li");
+        // Scrivo quello che sarà dentro ogni elemento della lista
+        memberElementkey.innerText = (`${key}: ${member[key]}`);
+        memberElement.append(memberElementkey);
 
     }
 
     // Creo un divisore tra ogni oggtto
     console.log("*********************")
 
+    memberContainer.append(memberElement);
+
 }
+
