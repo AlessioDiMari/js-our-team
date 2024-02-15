@@ -31,4 +31,21 @@ const teamMebers = [
         ruolo: "Grapgic Designer",
         immagine: "barbara-ramos-graphic-designer.jpg"
     },
-]
+];
+
+// Stampo in console gli oggetti dell'array
+for(let i = 0; i < teamMebers.length; i++){
+
+    const member = teamMebers[i];
+
+    // creo un ciclo for per far stampare tutte le propietà 
+    for( let key in member){
+        
+        console.log(`${key}: ${member[key]}`)
+
+    }
+
+    // Creo un divisore tra ogni oggtto
+    console.log("*********************")
+
+}
